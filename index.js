@@ -30,7 +30,7 @@ class Sprite {
   }
 
   draw() {
-    c.drawImage(this.image, -736, -662)
+    c.drawImage(this.image, this.position.x, this.position.y)
   }
 }
 
@@ -76,7 +76,7 @@ background.draw()
     playerImage.height //cropped height
   )
   if (keys.w.pressed) {
-    background.position.y = background.position.y - 3
+    background.position.y = background.position.y + 3
   }
 }
 animate()
